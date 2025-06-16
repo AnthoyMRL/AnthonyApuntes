@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnthonyApuntes.Views.NotePage"
+             Title="Pagina de Notas">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" BackgroundColor="#9C27B0" HasShadow="True" CornerRadius="0" Margin="0">
+            <Label Text="Escribe tu nota"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+        </Frame>
+
+        <Frame Grid.Row="1" Margin="15" BackgroundColor="White" HasShadow="True" CornerRadius="12">
+            <Editor x:Name="TextEditor"
+                    Placeholder="Escribe aquí tus pensamientos...."
+                    Text="{Binding Text}"
+                    FontSize="16"
+                    BackgroundColor="Transparent"
+                    TextColor="#2E2E2E" />
+        </Frame>
+
+        <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="10" Margin="15">
+            <Button Grid.Column="0"
+                    Text="Guardar"
+                    Clicked="SaveButton_Clicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50" />
+
+            <Button Grid.Column="1"
+                    Text="Eliminar"
+                    Clicked="DeleteButton_Clicked"
+                    BackgroundColor="#F44336"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50" />
+        </Grid>
+    </Grid>
+</ContentPage>
