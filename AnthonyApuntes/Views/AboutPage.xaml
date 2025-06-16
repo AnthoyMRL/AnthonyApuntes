@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnthonyApuntes.Views.AboutPage"
+             Title="Acerca de Anthony">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Margin="20">
+
+            <Frame BackgroundColor="#F3E5F5" HasShadow="True" CornerRadius="15">
+                <VerticalStackLayout Spacing="15">
+                    <Image Source="anthony.png"
+                           HeightRequest="120"
+                           HorizontalOptions="Center"
+                           SemanticProperties.Description="Icono de perfil de Anthony" />
+
+                    <Label Text="Anthony Morales"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#4A148C" />
+
+                    <Label Text="Estudiante de Ingeniería de Software"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#6A1B9A" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#E8F5E8" HasShadow="True" CornerRadius="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Mis Hobbies"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#2E7D32" />
+
+                    <Label Text="Jugar futbol"
+                           FontSize="16"
+                           TextColor="#388E3C" />
+
+                    <Label Text="Escuchar musica"
+                           FontSize="16"
+                           TextColor="#388E3C" />
+
+                    <Label Text="Jugar videojuegos"
+                           FontSize="16"
+                           TextColor="#388E3C" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#FFF3E0" HasShadow="True" CornerRadius="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Sobre esta Aplicación"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#E65100" />
+
+                    <Label Text="Esta aplicación de notas fue creada con .NET MAUI para organizar mis pensamientos"
+                           FontSize="16"
+                           TextColor="#F57C00"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Más sobre .NET MAUI"
+                    Clicked="LearnMore_Clicked"
+                    BackgroundColor="#9C27B0"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
